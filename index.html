@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <title>Kobir Tuitorial | Fee</title>
+    </head>
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        /* .show{
+            display: none;
+        } */
+        nav{
+            margin: 0 5rem;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #dddddd;
+        }
+        
+        .right a, .left a{
+            padding: 0.25rem;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            color: black;
+            transition: 0.2s all ease;
+        }
+        .right a:hover{
+           border-radius: 5px;
+           background: rgb(179, 177, 177);
+           color: rgb(0, 36, 199);
+        }
+        footer{
+            margin: 0 5rem;
+            background: #dddddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+        footer h4, footer p{
+            margin: 0;
+            padding: 0.25rem;
+        }
+        .form-container{
+            max-width: 35rem;
+            border-radius: 15px;
+            background: rgb(226, 226, 226);
+            margin: 2rem auto;
+        }
+        .form-wrap{
+            max-width: 30rem;
+            margin: 2rem auto;
+            align-items: center;
+            border-radius: 10px;
+            background: rgb(211, 211, 211);
+            display: flex;
+            flex-direction: column;
+        }
+        .main-form{
+            min-width: 20rem;
+            padding: .5rem 0;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+        }
+        .main-form input,.main-form label, .main-form select, .main-form select option {
+            font-size: 1.5rem;
+            
+        }
+        .main-form input, .main-form select{
+            margin: 0 0 .75rem;
+        }
+        .btn-div{
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn-div .btn{
+            min-width: 5rem;
+            padding: .5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: .3s all ease;
+        }
+        .btn-div .btn:hover{
+            background: rgb(128, 128, 128);
+            color: #ffffff;
+        }
+        .printable{
+            display: none;
+        }
+        .print{
+            background: rgb(31, 253, 142);   
+        }
+        .btn-div .print:hover{
+            color: white;
+            background: rgb(4, 97, 85);
+        }
+        .red-text{
+            color: rgb(255, 0, 0); 
+        }
+        @media print{
+            .printable{
+                background: rgb(226, 226, 226);
+                max-width: 25%;
+                /* margin: 0.75rem; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+        }
+        .ofice-copy, .student-copy{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .foot{
+            margin-right:auto ;
+            font-size: .75rem;
+        }
+        .table-info{
+            font-size: .85rem;
+        }
+        .copyright {
+            text-align: center;
+            margin: .5rem 0 0 0;
+            font-size: .6rem;
+        }
+        .address p{
+            font-size: 0.6rem;
+            text-align: center;
+        }
+        .show, footer{
+            display: none;
+        }
+        }
+    </style>
+    
+    <body>
+        
+
+        <!-- Visible Part Starts Here -->
+
+        <div class="show">
+            <nav>
+                <div class="left">
+                    <h2><a href="index.php">Kobir Tuitorial</a></h2>
+                </div>
+                <div class="right">
+                    <a href="#">ICT Batch</a>
+                    <a href="#">Student List</a>
+                    <a href="#">Fee Statements</a>
+                    <a href="signup.php">Add student</a>
+                </div>
+            </nav>
+    
+            <div class="form-wrap">
+                <h2>Fee Collection Form</h2>
+                <form action="index.php" class="main-form" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name">
+                    <p class="red-text">Name can't be blank!</p>
+                    <label for="batch">Batch:</label>
+                    <select name="batch" id="batch" >
+                        <option value="">STT 4-5</option>
+                        <option value="">SMW 4-5</option>
+                        <option value="">STT 3-4</option>
+                        <option value="">STT 8-9</option>
+                    </select>
+                    <label for="month">Month</label>
+                    <input type="text" name="month" id="month">
+                    <label for="tk">Tk</label>
+                    <input type="number" name="tk" id="tk">
+                    <div class="btn-div">
+                        <input  type="submit" name="submit" class="btn" >
+                        <input  type="submit" name="print" class="btn print" value="print" onclick="window.print()">
+                    </div>
+            </div>
+        </div>
+
+        <div class="printable">
+            <!-- Student Copy -->
+            <div class="student-copy">
+            <h2>Kobir Tutorial</h2>
+            <div class="address">
+                <p>South Side of Taz tower, Edward<br> College Gate, Pabna</p>
+                <p>Mobile:01713735104</p>
+            </div>
+            <p><b> Fees Receipt</b></p>
+            <p><b>Student Copy</b></p>
+            <table class="table-info">
+                <tr>
+                    <td>Date: 12/8/2020</td>
+                    <td>Receipt No: 1001</td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td>Md. Shoriful Islam Shafi</td>
+                </tr>
+                <tr>
+                    <td>Batch:</td>
+                    <td>STT 4-5</td>
+                </tr>
+                <tr>
+                    <td>Month:</td>
+                    <td>Jan</td>
+                </tr>
+                <tr>
+                    <td>Tuition Fee:</td>
+                    <td>৳500.00</td>
+                </tr>
+            </table>
+            <div class="foot">
+                <br>
+                <br>
+                <hr>
+                <p>signature</p>
+                
+            </div>
+            <div class="copyright">
+                <p>Developed By: <br> Md. Habibur Rahman Habib &copy;2020 </p>
+            </div>
+            </div>
+
+            <!-- Office Copy -->
+
+            <div class="ofice-copy">
+                <p>✂---------------------------</p>
+                <h2>Kobir Tutorial</h2>
+                <div class="address">
+                    <p>South Side of Taz tower, Edward<br> College Gate, Pabna</p>
+                    <p>Mobile:01713735104</p>
+                </div>
+            <p><b> Fees Receipt</b></p>
+            <p><b>Office Copy</b></p>
+            <table class="table-info">
+                <tr>
+                    <td>Date: 12/8/2020</td>
+                    <td>Receipt No: 1001</td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td>Md. Shoriful Islam</td>
+                </tr>
+                <tr>
+                    <td>Batch:</td>
+                    <td>STT 4-5</td>
+                </tr>
+                <tr>
+                    <td>Month:</td>
+                    <td>Jan</td>
+                </tr>
+                <tr>
+                    <td>Tuition Fee:</td>
+                    <td>৳500.00</td>
+                </tr>
+            </table>
+            <div class="copyright">
+                <p>Developed By: <br> Md. Habibur Rahman Habib &copy;2020 </p>
+            </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <h3>All Rights Reserved </h3>
+            <p>&copy; Md. Habibur Rahman Habib 2020</p>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
