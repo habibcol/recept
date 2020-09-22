@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kobir Tuitorial | Statement</title>
+  </head>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    nav {
+      margin: 0 5rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #dddddd;
+    }
+
+    .right a,
+    .left a {
+      padding: 0.25rem;
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: black;
+      transition: 0.2s all ease;
+    }
+    .right a:hover {
+      border-radius: 5px;
+      background: rgb(179, 177, 177);
+      color: rgb(0, 36, 199);
+    }
+    footer {
+      margin: 0 5rem;
+      background: #dddddd;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    footer h4,
+    footer p {
+      margin: 0;
+      padding: 0.25rem;
+    }
+    .form-container {
+      max-width: 35rem;
+      border-radius: 15px;
+      background: rgb(226, 226, 226);
+      margin: 2rem auto;
+    }
+    .form-wrap {
+      max-width: 30rem;
+      margin: 2rem auto;
+      align-items: center;
+      border-radius: 10px;
+      background: rgb(211, 211, 211);
+      display: flex;
+      flex-direction: column;
+    }
+    .main-form {
+      min-width: 20rem;
+      padding: 0.5rem 0;
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+    }
+    .main-form input,
+    .main-form label,
+    .main-form select,
+    .main-form select option {
+      font-size: 1.5rem;
+    }
+    .main-form input,
+    .main-form select {
+      margin: 0 0 0.75rem;
+    }
+    .btn-div {
+      display: flex;
+      justify-content: space-between;
+    }
+    .btn-div .btn {
+      min-width: 5rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s all ease;
+    }
+    .btn-div .btn:hover {
+      background: rgb(128, 128, 128);
+      color: #ffffff;
+    }
+    .printable {
+      display: none;
+    }
+    .print {
+      background: rgb(31, 253, 142);
+    }
+    .btn-div .print:hover {
+      color: white;
+      background: rgb(4, 97, 85);
+    }
+    .red-text {
+      color: rgb(255, 0, 0);
+    }
+    .table-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0rem;
+    }
+    .all-fee, .fee-month{
+        border-collapse: collapse;
+        margin: 1rem;
+    }
+    td{
+        padding: .25rem;
+        text-align: center;
+    }
+  </style>
+
+  <body>
+    <nav>
+      <div class="left">
+        <h2><a href="index.php">Kobir Tuitorial</a></h2>
+      </div>
+      <div class="right">
+        <a href="index.html">Add Fee</a>
+        <a href="#">ICT Batch</a>
+        <a href="#">Student List</a>
+        <a href="fee_statement.html">Fee Statements</a>
+        <a href="signup.php">Add student</a>
+      </div>
+    </nav>
+
+    <div class="table-wrap">
+        <table border="1" class="all-fee">
+            <tr>
+                <th colspan="5">All Collections</th>
+            </tr>
+            <tr>
+                <th>Sn</th>
+                <th>Name</th>
+                <th>Batch</th>
+                <th>Month</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Md. Habibur Rahman Habib</td>
+                <td>STT 4-5</td>
+                <td>June</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Demo</td>
+                <td>STT 4-5</td>
+                <td>July</td>
+                <td>500</td>
+            </tr>
+        </table>
+
+        <table border="1" class="fee-month">
+            <tr>
+                <th colspan="5">Collections by Month</th>
+            </tr>
+            <tr>
+                <th>Sn</th>
+                <th>Name</th>
+                <th>Batch</th>
+                <th>Month</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Md. Habibur Rahman Habib</td>
+                <td>STT 4-5</td>
+                <td>June</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Demo</td>
+                <td>STT 4-5</td>
+                <td>July</td>
+                <td>500</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+      <h3>All Rights Reserved</h3>
+      <p>&copy; Md. Habibur Rahman Habib 2020</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

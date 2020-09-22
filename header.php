@@ -163,9 +163,10 @@
                     <h2><a href="index.php">Kobir Tuitorial</a></h2>
                 </div>
                 <div class="right">
+                    <a href="index.php">Home</a>
                     <a href="#">ICT Batch</a>
                     <a href="#">Student List</a>
-                    <a href="#">Fee Statements</a>
+                    <a href="fee_state.php">Fee Statements</a>
                     <a href="signup.php">Add student</a>
                 </div>
             </nav>
